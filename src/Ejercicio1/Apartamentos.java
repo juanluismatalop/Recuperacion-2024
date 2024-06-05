@@ -3,7 +3,7 @@ package Ejercicio1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Apartamentos extends Hoteles implements AlojamientosInterfaz{
+public class Apartamentos extends Hoteles{
     int nCamasIndividuales;
     int nCamasHotel;
 
@@ -27,17 +27,6 @@ public class Apartamentos extends Hoteles implements AlojamientosInterfaz{
 
     public void setnCamasHotel(int nCamasHotel) {
         this.nCamasHotel = nCamasHotel;
-    }
-    @Override
-    public int aforoHotel(Apartamentos apartamentos) {
-        return apartamentos.nHabitaciones * apartamentos.nCamasIndividuales;
-    }
-
-    @Override
-    public Alojamientos mayorAlojamiento(List<Alojamientos> alojamientos) {
-        alojamientos = new ArrayList<>();
-        Alojamientos alojamientoMayorAforo = null;
-        return alojamientoMayorAforo;
     }
     @Override
     public String toString() {

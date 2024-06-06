@@ -1,8 +1,5 @@
 package Ejercicio1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Alojamientos implements AlojamientosInterfaz {
     int id;
     String nombre;
@@ -12,6 +9,10 @@ public class Alojamientos implements AlojamientosInterfaz {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
+    }
+
+    public Alojamientos() {
+
     }
 
     public int getId() {
@@ -37,7 +38,6 @@ public class Alojamientos implements AlojamientosInterfaz {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
     @Override
     public int aforoHotel(Apartamentos apartamentos) {
         return apartamentos.nHabitaciones * apartamentos.nCamasIndividuales;

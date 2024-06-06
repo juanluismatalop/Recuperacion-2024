@@ -13,6 +13,10 @@ public class Apartamentos extends Hoteles{
         this.nCamasHotel = nCamasHotel;
     }
 
+    public Apartamentos() {
+        super();
+    }
+
     public int getnCamasIndividuales() {
         return nCamasIndividuales;
     }

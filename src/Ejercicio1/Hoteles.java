@@ -12,6 +12,10 @@ public class Hoteles extends Alojamientos{
         Estrellas = estrellas;
     }
 
+    public Hoteles() {
+        super();
+    }
+
     public int getnHabitaciones() {
         return nHabitaciones;
     }

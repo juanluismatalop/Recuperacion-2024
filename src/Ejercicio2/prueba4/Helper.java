@@ -15,7 +15,7 @@ public class Helper {
         try {
             lineas = Files.readAllLines(Paths.get(String.valueOf(ruta)));
             for (String s: lineas) {
-                lineasLeidas.add(s+"\n");
+                lineasLeidas.add(s);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

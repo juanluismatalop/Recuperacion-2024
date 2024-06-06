@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Ejercicio2.prueba3;
 
 public class Ciudad {
     String city;

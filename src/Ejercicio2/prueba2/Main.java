@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Ejercicio2.prueba2;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,9 +10,12 @@ public class Main {
         List<String> lineas;
         try {
             lineas = Files.readAllLines(Paths.get("Ficheros/ejercicio2.csv"));
+            for (String s: lineas) {
+                System.out.println(s);
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(lineas);
     }
+
 }

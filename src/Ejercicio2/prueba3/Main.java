@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Ejercicio2.prueba3;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main2 {
+public class Main {
     public static void main(String[] args) {
         List<String> lineas;
         List<Ciudad> ciudades = new ArrayList<>();

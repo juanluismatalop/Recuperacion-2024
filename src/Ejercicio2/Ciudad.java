@@ -47,6 +47,6 @@ public class Ciudad {
 
     @Override
     public String toString() {
-        return String.format("%s,%s,%f,%f%n", city, country, latitude, longitude);
+        return String.format("%n%s,%s,%f,%f", city, country, latitude, longitude);
     }
 }

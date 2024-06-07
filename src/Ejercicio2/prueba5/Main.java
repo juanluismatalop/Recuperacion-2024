@@ -3,9 +3,6 @@ package Ejercicio2.prueba5;
 import Ejercicio2.prueba4.Helper;
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;

@@ -4,8 +4,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Helper {
     public static List<Persona> obtenerPersonaDesdeFicheros(String ruta) throws IOException {
@@ -39,18 +42,21 @@ public class Helper {
         }
         return null;
     }
-    public static long escribirFichero(Path ruta, List<Persona> personas){
-        ruta = Paths.get("Ficheros/Input/PersonasRecuperacion.csv");
-        //creamos un builder
+    public void escribirEnFichero(String ruta, List<Persona> personas) throws IOException {
+        Path path = Path.of(ruta);
         StringBuilder builder = new StringBuilder();
-        //recorreromos la lista
-        for(Persona persona:personas){
+        for (int i = 0; i < personas.size(); i++) {
+            builder.append(i).append(".- ").append(personas.get(i)).append('\n');
         }
-        //añadimos cada elemento utilizando el toString
-        //usamosWriteString
-        return 0;
+        String texto = builder.toString().substring(0,builder.toString().length());
+        Files.writeString(path, texto, StandardOpenOption.CREATE);
     }
     public static boolean validarEmail(String email){
-        return false;
+        if (email==null)
+            return false;
+        String emailValido = "^[\\w]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+        Pattern pattern = Pattern.compile(emailValido);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

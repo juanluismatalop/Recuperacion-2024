@@ -42,7 +42,7 @@ public class Helper {
         }
         return null;
     }
-    public void escribirEnFichero(String ruta, List<Persona> personas) throws IOException {
+    public static long escribirEnFichero(String ruta, List<Persona> personas) throws IOException {
         Path path = Path.of(ruta);
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < personas.size(); i++) {
@@ -50,6 +50,7 @@ public class Helper {
         }
         String texto = builder.toString().substring(0,builder.toString().length());
         Files.writeString(path, texto, StandardOpenOption.CREATE);
+        return 0;
     }
     public static boolean validarEmail(String email){
         if (email==null)
@@ -58,5 +59,11 @@ public class Helper {
         Pattern pattern = Pattern.compile(emailValido);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
+    }
+
+    public static void main(String[] args) throws IOException {
+        List<Persona> personas = Helper.obtenerPersonaDesdeFicheros("Ficheros/Output/PersonasRecuperacion.csv");
+
+        System.out.println(Helper.escribirEnFichero("Ficheros/Output/PersonasRecuperacion.csv", personas));
     }
 }

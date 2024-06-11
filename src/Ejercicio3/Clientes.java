@@ -73,7 +73,7 @@ public class Clientes {
         return null;
     }
 
-    public List<Persona> personasPorDominioEmail() {
+    public List<Persona> personasPorDominioEmail(String email) {
         return null;
     }
 
